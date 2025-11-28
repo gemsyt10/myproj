@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div class="fon">
+    </div>
+    
+<div>
+    <p id="warn"> Do not leave the page if you do not want to lose your points progress.
+    </p
+</div>
+    
+<div class="btn1" id="app">
+  <h1>Comand N1: {{ count }}</h1>
+  <button @click="count++">
+     Add
+  </button>
+  <button class="btn2" @click="count--">
+      remove
+  </button>
+  <h2>Comand N2: {{point}}</h2>
+  <button @click="point++">Add</button>
+  <button @click="point--">remove</button>
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+const { createApp } = Vue;
+
+createApp({
+  data() {
+    return {
+      message: "added 1 point",
+      count: 0,
+      point: 0
+    }
+  }
+}).mount('#app');
+</script>
+ <style>
+    .fon {
+        background-color: #6B99FF;
+        width: auto;
+        height: 150px;
+     }
+    h1, h2, button{
+        font-size: 40px;
+    
+      }
+    button {
+        font-weight: bold;
+        border-width: 7px;
+        border-color: green;
+        border-radius: 8px;
+        font-size: 40px;
+        margin: 10px;
+        padding: 10px;
+        width: 170px;
+        height: 80px;
+        background-color: lightgreen;
+        box-sizing: border-box;
+    }
+    h1 ,h2{
+        display:flex ;
+        justify-content: space;
+    }
+    #warn {
+        font-size: 10px;
+        color: darkorange;
+    }
+ </style>
+</html>
+<! -- як вам щодчик очків -->
